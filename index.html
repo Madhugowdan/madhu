@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Madhu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+  Total bill ammount  <input type="number" id="rupee" required> <br>
+   percentage  <input type="number" id="pecent" required><br>
+    <input type="submit" onclick="calculate()"><br>
+    Amount percentage<input type="number" id="amtper"> <br>
+    total amount to pay<input type="number" id="total">
+    <script>
+        function calculate() {
+         var amt = Number(document.getElementById("rupee").value);
+
+         var per = document.getElementById("pecent").value;
+        var percent = ( amt * per ) / 100 ;
+        var tot = amt + percent;
+		Number(tot);
+        document.getElementById("amtper").value= percent;
+        document.getElementById("total").value= tot;
+		//document.getElementById("total").value = tot;
+        }
+
+    </script>
+
+</body>
+
+</html>
